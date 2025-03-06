@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Private Room - Draw & Guess</title>
+    <link rel="stylesheet" href="private_room_style.css" />
+  </head>
+  <body>
+    <div class="lobby-container">
+      <h1 class="title">Game Lobby</h1>
+
+      <!-- Room Code & Invite -->
+      <div class="room-info">
+        <p>Room Code: <span id="roomCode">ABCD1234</span></p>
+        <button id="copyInviteBtn">Copy Code</button>
+        <button class="invite-btn">Invite</button>
+      </div>
+
+      <!-- Main Section (Players + Settings) -->
+      <div class="main-section">
+        <!-- Players List -->
+        <div class="players-list">
+          <h2>Players</h2>
+          <ul id="playerList">
+            <!-- Player names will be inserted dynamically -->
+          </ul>
+        </div>
+
+        <!-- Game Settings -->
+        <div class="settings">
+          <h2>Game Settings</h2>
+
+          <!-- Time per Round -->
+          <div class="setting-item">
+            <label>Time Per Round:</label>
+            <div class="counter">
+              <button id="decreaseTime">
+                <svg viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <span id="time">60s</span>
+              <button id="increaseTime">
+                <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Number of Rounds -->
+          <div class="setting-item">
+            <label>Number of Rounds:</label>
+            <div class="counter">
+              <button id="decreaseRounds">
+                <svg viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <span id="rounds">4</span>
+              <button id="increaseRounds">
+                <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Max Players -->
+          <div class="setting-item">
+            <label>Max Players:</label>
+            <div class="counter">
+              <button id="decreasePlayers">
+                <svg viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <span id="players">4</span>
+              <button id="increasePlayers">
+                <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Match Button -->
+      <button class="start-game-btn">Start Match</button>
+    </div>
+
+    <script src="private_room_script.js"></script>
+  </body>
+</html>
